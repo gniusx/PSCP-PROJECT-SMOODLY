@@ -2,51 +2,61 @@
 <head>
     <title>SMOODLY - Your Mood</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <div class="row">
         <h1>
             <a href="index.html">
-                <div class="button-white">
-                    <img src="อยาได้ไอคอนรูปบ้านอ่ะ" alt="home" class="image" margin="0">
-                </div>
+                <button>
+                    <!-- สมมติว่าเป็นปุ่มhome -->
+                </button>
             </a>
         <b>SMOODLY</b>
         <hr>
         </h1></div>
-    <h2><center><font face="JasmineUPC" size="10"><b>How is your day going?</b></font><br></h2>
-    
+
+    <div class="text-main">
+        How is your day going?
+    </div>
+
     <div class="row">
         <div class="button-page2">
             <a href="page3 topic.html">
-                <img src="iCon-Mood/SAD_MOOD.png" alt="Icon1" class="image" margin="0">
-                <div class="button-text">Sad (เศร้า)</div>
+                <button onclick="mood('sad')">
+                    <img src="iCon-Mood/SAD_MOOD.png" alt="icon-sad" class="image" margin="0">
+                    <div class="button-text">Sad (เศร้า)</div>
+                </button>
             </a></div>
         <div class="button-page2">
             <a href="page3 topic.html">
-                <img src="iCon-Mood/ANGRY_MOOD.png" alt="Icon2" class="image"  margin="0">
+                <img src="iCon-Mood/ANGRY_MOOD.png" alt="icon-angry" class="image"  margin="0">
                 <div class="button-text">Angry (โกรธ)</div>
             </a></div>
     </div>
     <div class="row">
         <div class="button-page2">
             <a href="page3 topic.html">
-                <img src="iCon-Mood/BORED_MOOD.png" alt="Icon3" class="image">
+                <img src="iCon-Mood/BORED_MOOD.png" alt="icon-bored" class="image">
                 <div class="button-text">Bored (น่าเบื่อ)</div>
             </a></div>
         <div class="button-page2">
             <a href="page3 topic.html">
-                <img src="iCon-Mood/EMBARRAS_MOOD.png" alt="Icon5" class="image">
+                <img src="iCon-Mood/EMBARRAS_MOOD.png" alt="icon-embarrassed" class="image">
                 <div class="button-text">Embarrassed (น่าอาย)</div>
             </a></div>
     </div>
     <div class="row">
         <div class="button-page2">
             <a href="page3 topic.html">
-                <img src="iCon-Mood/HAPPY_MOOD.png" alt="Icon6" class="image">
+                <img src="iCon-Mood/HAPPY_MOOD.png" alt="icon-happy" class="image">
                 <div class="image-text">Happy (มีความสุข)</div>
             </a></div>
     </div>
+    <!-- ส่งอันที่เลือกไปหน้า5 -->
+    <script>
+        function mood(selected) {
+            window.location.href = "page5 output?mood=" + selected;
+        }
+    </script>
 </body>
 </html>
