@@ -21,10 +21,25 @@
             <hr>
         </h1></div>
 
+        วันนี้คุณรู้สึก
+        <div id="mood_show"></div>
+        เรื่อง
         <!-- random text -->
         <div id="text_random">
-            - เฮ้ๆๆ ใจเย็นๆกันก่อนนะ โกรธเพื่อนไปบางทีเราอาจจะเหนื่อยเองนะ เพราะงั้นมาปล่อยใจแล้วถ้าพร้อมก็อย่าลืมปรับความเข้าใจกันด้วยนะ
-
+            loading for random text...
         </div>
+
+        <script>
+            function getQueryParameter(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+    
+            // Get the image name from the query parameter and display it
+            var mood = getQueryParameter("mood");
+            if (mood) {
+                document.getElementById("mood_show").textContent = "moodที่เลือก: " + mood;
+            }
+        </script>
 </body>
 </html>
