@@ -1,5 +1,4 @@
 body {
-    /*Overflow-y:scroll;*/ /*ไว้เลื่อนหน้าจอ แต่ปิดไว้ก่อน*/
     background-image: url("iMages/test\ bg.png"); 
     background-size: cover;
     background-position: center;
@@ -13,7 +12,7 @@ body {
     text-align: center;
     }
 
-h1 {
+h1 { /*tabหัวกระดาษ*/
     font-size: 200%; 
     margin-top: 10px;
     font-weight: bold;
@@ -26,7 +25,7 @@ h1 {
     justify-content: center;
     text-align: center;
 }
-h1 button{
+h1 button{ /*ปุ่ม home back*/
     border: none;
     width: 50px;
     height: 50px;
@@ -34,24 +33,18 @@ h1 button{
     margin-left: 8px;
 }
 
-hr {
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    height: 1px;
-    margin: 0px 0;
-}
-.row {
+.row { /*จัดให้ทุกสิ่งอย่างอยู่กลางหน้า*/
     text-align: center;
     display: flex;
     justify-content: center;
 }
-.image {
+.image { /*กำหนดโลโก้หน้า index*/
     margin: 60px;
     width: 100px;
     height: auto;
 }
 
-.text-main {
+.text-main { /*หัวข้อเกือบทุกหน้ามั้ง แก้แล้วลองเช็คด้วย*/
     font-family:'JasmineUPC';
     font-size: 250%; 
     margin-top: 10px;
@@ -60,7 +53,7 @@ hr {
     margin-bottom: 20px;
 }
 
-.button-white {
+.button-white { /*ปุ่มหน้าindex*/
     font-family:'JasmineUPC';
     font-size: 200%; 
     color: #000000;
@@ -71,12 +64,14 @@ hr {
     width: 150px;
     height: 30px;
 }
-.button-white img {
+.button-white img { /*ไม่ได้ใช้แล้ว ตอนแรกมีไว้กำหนดรูปในปุ่มindex*/
     height: 10px;
     width: auto;
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
+/*ปุ่มหน้า 2 กับ 3*/
 .button-page2 {
     width: 300px;
     height: 300px;
