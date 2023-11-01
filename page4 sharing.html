@@ -46,9 +46,16 @@
             </form>
         </div>
 
-        <a href="page5 output.html">
-            <button style=background-color:#b0eaf0>
-                <div class="text">Next ></div>
-            </button>
+        <button onclick="to_output()" style=background-color:#b0eaf0>
+            <div class="text">Next ></div>
+        </button>
     </body>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const selected = urlParams.get("selected");
+
+        function to_output() {
+            window.location.href = 'page5 output.html?selected=' + selected;
+        }
+    </script>
 </html>

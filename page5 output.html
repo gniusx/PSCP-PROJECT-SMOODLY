@@ -21,16 +21,25 @@
             <hr>
         </h1></div>
 
-        วันนี้คุณรู้สึก
-        <p id="mood_show"></p>
-        เรื่อง
-        <!-- random text -->
-        <div id="text_random">
-            loading for random text...
-        </div>
+        <div class="text-main">
+            วันนี้คุณรู้สึก
+            <div id="selected_show"></div>
+            ซึ่งทำให้คุณมีเรื่องที่ต้องการจะเล่า
 
+            <p>เราจึงอยากจะบอกคุณว่า</p>
+            <div id="text_random">
+                <!-- random text -->
+                loading for random text...
+            </div>
+        </div>
         <script>
             /*กำลังแก้*/
+        const urlParams = new URLSearchParams(window.location.search);
+        const selected = urlParams.get("selected");
+
+        const decodedText = decodeURIComponent(selected);
+        const element = document.getElementById("selected_show")
+        element.innerHTML = decodedText;
         </script>
 </body>
 </html>
