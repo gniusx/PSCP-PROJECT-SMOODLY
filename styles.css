@@ -78,7 +78,8 @@ hr {
     margin-bottom: 5px;
 }
 .button-page2 {
-    width: 15%;
+    width: 300px;
+    height: 300px;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.4);
     padding: 0px 12px;
@@ -96,7 +97,7 @@ hr {
     margin-top: 10px;
     margin-bottom: 5px;
 }
-.button-page2 button{ /*ใช้ทับกันแก้ขัดไปก่อนนะ ไว้มาแก้ได้ๆ*/
+.button-page2 button{ 
     background-color: transparent;
     border: none;
 }
