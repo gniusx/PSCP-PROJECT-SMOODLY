@@ -1,43 +1,28 @@
 <html>
     <head>
-        <title>Share</title>
-        <style>
-            .text {
-            font-size: 30px; 
-            margin-top: 0px; 
-            font-family:'JasmineUPC';
-            font-weight: bold;
-            color: #000000;
-            margin-bottom: 0px;
-            }
-
-            .row {
-            display: flex;
-            justify-content: center;
-        }
-
-            a {
-                text-decoration: none;
-            }
-        </style>
+    <title>SMOODLY - Sharing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+        h1 {font-family: "Audiowide", sans-serif;} 
+        /*ถ้าจะimport font ให้แก้บรรทัดนี้กับ href ด้านบนที่เป็นลิ้ง*/
+    </style>
     </head>
     <body>
-        <a href="index.html">
-            <button style=background-color:#000000>
-                <font face="JasmineUPC" size="10" color=#ffffff>
-                    HOME
-                </font>
-                
-            </button>
-        <a href="page3 topic.html">
-        <button style=background-color:#b0eaf0>
-            <div class="text">
-                Back >
-            </div>
-        </button>
-
-        </a>
-        <h1><center><font face="JasmineUPC" size="10"><b>wanna share some thoughts?</b></font><br></h1>
+        <div class="row">
+            <h1>
+                <a href="index.html">
+                    <button><!-- สมมติว่าเป็นปุ่มhome --></button>
+                </a>
+                <b>SMOODLY</b>
+                <a href="page3 topic.html">
+                    <button><!-- สมมติว่าเป็นปุ่มback --></button>
+                </a>
+                <hr>
+            </h1></div>
+        <div class="text-main">
+            wanna share some thoughts?
+        </div>
 
         <div class="row">
             <form>
@@ -46,8 +31,8 @@
             </form>
         </div>
 
-        <button onclick="to_output()" style=background-color:#b0eaf0>
-            <div class="text">Next ></div>
+        <button onclick="to_output()" class="button-white">
+            Next
         </button>
     </body>
     <script>
