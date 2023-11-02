@@ -13,6 +13,7 @@ body {
     }
 
 h1 { /*tabหัวกระดาษ*/
+    font-family: "Audiowide", sans-serif;
     font-size: 200%; 
     margin-top: 10px;
     font-weight: bold;
@@ -39,30 +40,39 @@ h1 button{ /*ปุ่ม home back*/
     justify-content: center;
 }
 .image { /*กำหนดโลโก้หน้า index*/
-    margin: 60px;
-    width: 100px;
+    margin: 30px;
+    width: 15%;
     height: auto;
 }
 
 .text-main { /*หัวข้อเกือบทุกหน้ามั้ง แก้แล้วลองเช็คด้วย*/
-    font-family:'JasmineUPC';
-    font-size: 250%; 
+    font-family: 'Prompt', sans-serif;
+    font-size: 200%; 
     margin-top: 10px;
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 0.7;
+}
+.text-sub { /*ใช้ตรง output*/
+    font-family: 'Prompt', sans-serif;
+    font-size: 70%; 
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .button-white { /*ปุ่มหน้าindex*/
-    font-family:'JasmineUPC';
-    font-size: 200%; 
+    font-family: 'Prompt', sans-serif;
+    font-size: 170%; 
     color: #000000;
     opacity: 0.6;
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid rgb(255, 255, 255);
     border-radius: 15px;
-    width: 150px;
-    height: 30px;
+    width: 170px;
+    height: 40px;
 }
 .button-white img { /*ไม่ได้ใช้แล้ว ตอนแรกมีไว้กำหนดรูปในปุ่มindex*/
     height: 10px;
@@ -73,9 +83,12 @@ h1 button{ /*ปุ่ม home back*/
 
 /*ปุ่มหน้า 2 กับ 3*/
 .button-page2 {
-    width: 300px;
-    height: 300px;
-    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 170%; 
+    color: #000000;
+
+    width: 220px;
+    height: 220px;
     background-color: rgba(255, 255, 255, 0.4);
     padding: 0px 12px;
     margin: 10px;
@@ -97,15 +110,20 @@ h1 button{ /*ปุ่ม home back*/
     border: none;
 }
 
-.button-text {
-    font-size: 20px; 
-    font-family:'Noto Sans Thai'; /*แก้ฟ้อนต์ตรงปุ่มหน้าmood*/
-    font-weight: bold;
+.button-text { /*ข้อความในปุ่มหน้า 2 3*/
+    font-family: 'Prompt', sans-serif;
+    font-size: 170%; 
     color: #000000;
+    line-height: 0.3;
+
     margin-top: 0px; 
     margin-bottom: 20px;
-
 }
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
 a {
     text-decoration: none;
 }
