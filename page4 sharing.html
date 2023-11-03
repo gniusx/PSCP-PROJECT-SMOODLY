@@ -15,14 +15,18 @@
         <div class="row">
             <h1>
                 <a href="index.html">
-                    <button><!-- สมมติว่าเป็นปุ่มhome --></button>
+                    <button>
+                        <img src="iMages/test home.png" alt="icon-home">
+                    </button>
                 </a>
                 <b>SMOODLY</b>
                 <a href="page3 topic.html">
-                    <button><!-- สมมติว่าเป็นปุ่มback --></button>
+                    <button>
+                        <img src="iMages/test back.png" alt="icon-back">
+                    </button>
                 </a>
-                <hr>
             </h1></div>
+            
         <div class="text-main">
             wanna share some thoughts?
         </div>
@@ -41,7 +45,7 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const selected = urlParams.get("selected");
-
+        
         function to_output() {
             window.location.href = 'page5 output.html?selected=' + selected;
         }

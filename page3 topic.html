@@ -15,15 +15,20 @@
     <div class="row">
         <h1>
             <a href="index.html">
-                <button><!-- สมมติว่าเป็นปุ่มhome --></button>
+                <button>
+                    <img src="iMages/test home.png" alt="icon-home">
+                </button>
             </a>
             <b>SMOODLY</b>
             <a href="page2 selectmood.html">
-                <button><!-- สมมติว่าเป็นปุ่มback --></button>
+                <button>
+                    <img src="iMages/test back.png" alt="icon-back">
+                </button>
             </a>
-            <hr>
         </h1></div>
 
+    <p id="mood_show" class="text-sub"></p>
+    <p class="des-small">(กดผิดหรอ ถ้างั้นสามารถย้อนกลับไปแก้ได้ที่ด้านบนเลย)</p>
     <div class="text-main">
         แล้วเรื่องที่ทำให้คุณอยากแบ่งปันความรู้สึกกับเราล่ะ
     </div>
@@ -67,6 +72,9 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const selected_mood = urlParams.get("mood");
+
+        const element = document.getElementById("mood_show")
+        element.innerHTML = "คุณรู้สึก"+selected_mood+"ใช่ไหม?";
 
         function topic(selected_topic) {
             window.location.href = 'page4 sharing.html?selected=' + selected_mood + "เรื่อง" + selected_topic;
