@@ -68,7 +68,7 @@ h1 img {
     color: #ffffff;
     margin-bottom: 0px;
 }
-.des-small {
+.des-small { /*ไว้ใช้กับคำอธิบายเพิ่มเติม*/
     font-family: 'Prompt', sans-serif;
     font-size: 100%; 
     margin: 0px;
