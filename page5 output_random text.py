@@ -1,5 +1,6 @@
 """for testing randoming text from file"""
-#สมมติว่าเลือก angry
+from pyscript import document
+
 import random
 angry_txt = 'text_output/Text_output_Angry (โกรธ).txt'
 #r อ่านข้อความในไฟล์
