@@ -2,6 +2,10 @@
 <head>
     <title>SMOODLY - Your Mood</title>
     <link rel="stylesheet" href="styles.css">
+<!-- module -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+<!-- module -->
 <!-- font -->
     <!-- font-family: "Audiowide", sans-serif; -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
@@ -25,7 +29,6 @@
                     <img src="iMages/test back.png" alt="icon-bored">
                 </button>
             </a>
-            <hr>
         </h1></div>
 
         <div class="text-main">
@@ -43,13 +46,19 @@
             </div>
         
         <script>
-            /*กำลังแก้*/
+        /*กำลังแก้*/
+        /*แสดงผลตัวเลือกก่อนหน้านี้ว่าเลือกอะไรไป*/
+            /*ดึงผลมาจากตรงurl*/
         const urlParams = new URLSearchParams(window.location.search);
         const selected = urlParams.get("selected");
-
+            /*เอาค่าที่ได้ไปแสดงผลใน id=selected_show*/
         const decodedText = decodeURIComponent(selected);
-        const element = document.getElementById("selected_show")
-        element.innerHTML = decodedText;
+        const display_selected = document.getElementById("selected_show")
+        display_selected.innerHTML = decodedText;
+
+        /*สุ่มข้อความให้กำลังใจ*/
+            
         </script>
+        <script type="py" src="./main.py" config="./pyscript.json"></script>
 </body>
 </html>

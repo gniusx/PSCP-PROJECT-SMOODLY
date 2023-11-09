@@ -20,17 +20,16 @@
                     </button>
                 </a>
                 <b>SMOODLY</b>
-                <!--<a href="page3 topic.html">
+                <a href="page2 selectmood.html">
                     <button>
                         <img src="iMages/test back.png" alt="icon-back">
                     </button>
-                </a>-->
+                </a>
             </h1>
         </div>
             
-        <div class="text-main">
-            wanna share some thoughts?
-        </div>
+        <p id="selected_show" class="text-sub"></p>
+        <p class="text-sub">เราพร้อมที่จะรับฟังคุณนะ</p>
 
         <div class="row">
             <form>
@@ -47,6 +46,9 @@
         const urlParams = new URLSearchParams(window.location.search);
         const selected = urlParams.get("selected");
         
+        const element = document.getElementById("selected_show")
+        element.innerHTML = "ต้องการเล่าถึงสิ่งที่ทำให้คุณรู้สึก"+selected+"ไหม?";
+
         function to_output() {
             window.location.href = 'page5 output.html?selected=' + selected;
         }
