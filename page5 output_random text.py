@@ -1,5 +1,11 @@
 """for testing randoming text from file"""
-from Flask
+
+def receive_selected():
+    html_selected = request.get.data(as_text=True)
+    #ลองทำตามตัวอย่างอ่ะ แสดงค่าไปไฟล์text
+    with open('output.txt', 'w') as file:
+        file.write(html_selected)
+    return 'ส่งข้อมูลสำเร็จ'
 
 def randomtext(selected):
     """เสิชชื่อไฟล์ที่ตรงกับ input มาทำ list"""
@@ -21,3 +27,4 @@ def randomtext(selected):
         output_file.write(html_page5)
 randomtext("angry-family")
 #แต่ต้องมากด run ก่อนอ่ะตอนนี้ ถึงจะขึ้นบนเว็บ
+

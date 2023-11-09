@@ -40,8 +40,8 @@
                 <p>เราจึงอยากจะบอกคุณว่า</p>
             </div>
             
-            <button onclick="send_to_py()" class="button-white">
-                loading for random text
+            <button onclick="send_to_py()">
+                test
             </button>
         
         <script>
@@ -58,7 +58,13 @@
         /*สุ่มข้อความให้กำลังใจ*/
         /*จะลองflaskแทนละ*/
         function send_to_py() {
-            
+            fetch('/send_selected', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: selected,
+            });
         }
         </script>
 </body>
