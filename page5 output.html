@@ -3,8 +3,7 @@
     <title>SMOODLY - Your Mood</title>
     <link rel="stylesheet" href="styles.css">
 <!-- module -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
-    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+    
 <!-- module -->
 <!-- font -->
     <!-- font-family: "Audiowide", sans-serif; -->
@@ -40,10 +39,10 @@
                 <p>ซึ่งทำให้คุณมีเรื่องที่ต้องการจะเล่า
                 <p>เราจึงอยากจะบอกคุณว่า</p>
             </div>
-            <div class="text-sub" id="text_random">
-                <!-- random text -->
-                loading for random text...
-            </div>
+            
+            <button onclick="send_to_py()" class="button-white">
+                loading for random text
+            </button>
         
         <script>
         /*กำลังแก้*/
@@ -57,8 +56,10 @@
         display_selected.innerHTML = decodedText;
 
         /*สุ่มข้อความให้กำลังใจ*/
+        /*จะลองflaskแทนละ*/
+        function send_to_py() {
             
+        }
         </script>
-        <script type="py" src="./main.py" config="./pyscript.json"></script>
 </body>
 </html>

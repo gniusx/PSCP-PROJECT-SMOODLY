@@ -1,5 +1,5 @@
 """for testing randoming text from file"""
-#from pyscript import document
+from Flask
 
 def randomtext(selected):
     """เสิชชื่อไฟล์ที่ตรงกับ input มาทำ list"""
