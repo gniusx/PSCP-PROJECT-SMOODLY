@@ -19,7 +19,7 @@ def randomtext(selected):
         eachline = file.readlines()
     #สุ่มจากlist
     random_t = random.choice(eachline)
-    print(random_t)
+    return random_t
 
     #ใส่ข้อความที่สุ่มได้ลงใน html
     #ขอปิดไว้ก่อนน้า ถ้ากดไฟล์มันจะเปลี่ยนแล้วเปลี่ยนเลยอยู่น่ะ
@@ -33,4 +33,6 @@ def randomtext(selected):
 #randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ'))
 #เวอร์ชั่นmanual ตรงด้านในวงเล็บของจริงจะเป็นค่าที่เราดึงมาจากเว็บ
 def send_to_page5(): 
-    Element("random_show").write(f"{randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ'))}")
+    Element("random_show").write("น่าเบื่อเรื่องสุขภาพ")
+    #Element("random_show").write(f"{randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ'))}")
+#print(randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ')))
