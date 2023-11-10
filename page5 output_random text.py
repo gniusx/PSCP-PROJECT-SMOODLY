@@ -1,4 +1,5 @@
 """for testing randoming text from file"""
+from pyscript import Element
 
 def trans_to_eng(thai_selected):
     """เปลี่ยนค่าที่ดึงจากไทยเป็นอังกฤษ"""
@@ -11,7 +12,7 @@ def trans_to_eng(thai_selected):
 def randomtext(selected):
     """เสิชชื่อไฟล์ที่ตรงกับ input มาทำ list"""
     import random
-    text = ('text_output/text set_new/%s.txt') %selected
+    text = ('text_output/%s.txt') %selected
     #r อ่านข้อความในไฟล์
     with open(text, 'r') as file:
         #ทำข้อความเป็นlist
@@ -29,6 +30,7 @@ def randomtext(selected):
 
     #with open('page5 output.html', 'w') as output_file:
         #output_file.write(html_page5)
-randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ'))
+#randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ'))
 #เวอร์ชั่นmanual ตรงด้านในวงเล็บของจริงจะเป็นค่าที่เราดึงมาจากเว็บ
-
+def send_to_page5(): 
+    Element("random_show").write(f"{randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ'))}")

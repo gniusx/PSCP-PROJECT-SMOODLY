@@ -3,7 +3,8 @@
     <title>SMOODLY - Your Mood</title>
     <link rel="stylesheet" href="styles.css">
 <!-- module -->
-    
+<link rel="stylesheet" href="https://pyscript.net/releases/2023.05.1/pyscript.css" />
+<script defer src="https://pyscript.net/releases/2023.05.1/pyscript.js"></script>
 <!-- module -->
 <!-- font -->
     <!-- font-family: "Audiowide", sans-serif; -->
@@ -40,32 +41,25 @@
                 <p>เราจึงอยากจะบอกคุณว่า</p>
             </div>
             
-            <button onclick="send_to_py()">
+            <button id="send_to_py" py-click="send_to_page5()">
                 test
             </button>
+
+            <div id="random_show"></div>
         
         <script>
         /*กำลังแก้*/
         /*แสดงผลตัวเลือกก่อนหน้านี้ว่าเลือกอะไรไป*/
             /*ดึงผลมาจากตรงurl*/
+        //const ค่าคงที่
         const urlParams = new URLSearchParams(window.location.search);
         const selected = urlParams.get("selected");
             /*เอาค่าที่ได้ไปแสดงผลใน id=selected_show*/
         const decodedText = decodeURIComponent(selected);
         const display_selected = document.getElementById("selected_show")
         display_selected.innerHTML = decodedText;
-
-        /*สุ่มข้อความให้กำลังใจ*/
-        /*จะลองflaskแทนละ*/
-        function send_to_py() {
-            fetch('/send_selected', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'text/plain',
-                },
-                body: selected,
-            });
-        }
         </script>
+<!-- Part of สุ่มข้อความให้กำลังใจ : ส่งข้อมูลไป.txt-->
+        <py-script src="./page5 output_random text.py"></py-script>
 </body>
 </html>
