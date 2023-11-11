@@ -12,7 +12,7 @@ def trans_to_eng(thai_selected):
 def randomtext(selected):
     """เสิชชื่อไฟล์ที่ตรงกับ input มาทำ list"""
     import random
-    text = ('text_output/%s.txt') %selected
+    text = ('./text_output/%s.txt') %selected
     #r อ่านข้อความในไฟล์
     with open(text, 'r') as file:
         #ทำข้อความเป็นlist
@@ -21,18 +21,8 @@ def randomtext(selected):
     random_t = random.choice(eachline)
     return random_t
 
-    #ใส่ข้อความที่สุ่มได้ลงใน html
-    #ขอปิดไว้ก่อนน้า ถ้ากดไฟล์มันจะเปลี่ยนแล้วเปลี่ยนเลยอยู่น่ะ
-    
-    #with open('page5 output.html', 'r') as show_output:
-        #html_page5 = show_output.read()
-    #html_page5 = html_page5.replace("loading for random text...", random_t)
-
-    #with open('page5 output.html', 'w') as output_file:
-        #output_file.write(html_page5)
-#randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ'))
-#เวอร์ชั่นmanual ตรงด้านในวงเล็บของจริงจะเป็นค่าที่เราดึงมาจากเว็บ
-def send_to_page5(): 
-    Element("random_show").write("น่าเบื่อเรื่องสุขภาพ")
-    #Element("random_show").write(f"{randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ'))}")
+def send_to_page5():
+    """selected ใส่ค่าจาก pyscript ใน html"""
+    #Element("random_show").write("น่าเบื่อเรื่องสุขภาพ")
+    Element("random_show").write(f"{randomtext(trans_to_eng(selected))}")
 #print(randomtext(trans_to_eng('น่าเบื่อเรื่องสุขภาพ')))

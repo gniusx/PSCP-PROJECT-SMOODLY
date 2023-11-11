@@ -1,8 +1,0 @@
-        <!-- Part of สุ่มข้อความให้กำลังใจ : ส่งข้อมูลไป.txt-->
-    <py-script>
-        def write_txt():
-            f = open('output.txt', 'w')
-            f.write('hello')
-            f.close
-        write_txt()
-    </py-script>

@@ -44,14 +44,13 @@
                 <p>เราจึงอยากจะบอกคุณว่า</p>
             </div>
             
-            <button id="send_to_py" py-click="send_to_py()">
+            <button id="send_to_py" py-click="send_to_page5()">
                 test
             </button>
 
-            <div id="random_show"></div>
+            <div id="random_show" class="text-sub"></div>
         
         <script>
-        /*กำลังแก้*/
         /*แสดงผลตัวเลือกก่อนหน้านี้ว่าเลือกอะไรไป*/
             /*ดึงผลมาจากตรงurl*/
         //const ค่าคงที่
@@ -61,9 +60,19 @@
         const decodedText = decodeURIComponent(selected);
         const display_selected = document.getElementById("selected_show")
         display_selected.innerHTML = decodedText;
+
+        // Function to be executed when the page loads
+        function autoClick() {
+        // Simulate a button click
+        document.getElementById('myButton').click();
+        }
+
+        // Attach the autoClick function to the window.onload event
+        window.onload = autoClick;
+
         </script>
-<!-- Part of สุ่มข้อความให้กำลังใจ : ส่งข้อมูลไป.txt-->
+<!-- Part of สุ่มข้อความให้กำลังใจ-->
         <py-script>from js import selected</py-script>
-        <py-script src="./main.py"></py-script>
+        <py-script src="./page5 output_randomV2.py"></py-script>
 </body>
 </html>
