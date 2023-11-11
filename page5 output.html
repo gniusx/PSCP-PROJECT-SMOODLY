@@ -27,8 +27,7 @@
                 </button>
             </a>
             <b>SMOODLY</b>
-            <a href="page4 sharing.html">
-                <button>
+                <button onclick="back()">
                     <img src="iMages/test back.png" alt="icon-bored">
                 </button>
             </a>
@@ -60,16 +59,11 @@
         const decodedText = decodeURIComponent(selected);
         const display_selected = document.getElementById("selected_show")
         display_selected.innerHTML = decodedText;
-
-        // Function to be executed when the page loads
-        function autoClick() {
-        // Simulate a button click
-        document.getElementById('myButton').click();
+        
+        /*ปุ่ม back*/
+        function back() {
+            window.location.href = 'page4 sharing.html?selected=' + selected;
         }
-
-        // Attach the autoClick function to the window.onload event
-        window.onload = autoClick;
-
         </script>
 <!-- Part of สุ่มข้อความให้กำลังใจ-->
         <py-script>from js import selected</py-script>
