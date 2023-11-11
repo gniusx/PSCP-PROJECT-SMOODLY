@@ -88,6 +88,11 @@ h1 img {
     width: 170px;
     height: 40px;
 }
+.button-white:hover {
+    background-color: rgba(255, 255, 255, 1.0);
+    color: #b8b8b8;
+}
+
 .button-white img { /*ไม่ได้ใช้แล้ว ตอนแรกมีไว้กำหนดรูปในปุ่มindex*/
     height: 10px;
     width: auto;
@@ -117,6 +122,10 @@ h1 img {
     justify-content: center;
     text-align: center;
 }
+.button-page2:hover {
+    box-shadow: 12px 12px 12px rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+}
 .button-page2 img {
     height: 100px;
     width: auto;
@@ -138,8 +147,20 @@ h1 img {
     margin-bottom: 20px;
 }
 
-textarea {
+textarea { /*กล่องข้อความหน้า 4*/
+    font-family: 'Prompt', sans-serif;
     background-color: rgba(255, 255, 255, 0.4);
+}
+
+.output-textbox {
+    font-family: 'Prompt', sans-serif;
+    font-size: 100%;
+    color: #000000;
+    opacity: 0.6;
+    border-radius: 15px;
+    padding: 2% 2%;
+    margin: 20;
+    width: 50%;
 }
 
 a {

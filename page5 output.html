@@ -40,15 +40,15 @@
                 <p id="selected_show"></p>
                 <p>—————————
                 <p>ซึ่งทำให้คุณมีเรื่องที่ต้องการจะเล่า
-                <p>เราจึงอยากจะบอกคุณว่า</p>
+                <p>เราจึงมีข้อความที่อยากจะบอกคุณ</p>
             </div>
             
-            <button id="send_to_py" py-click="send_to_page5()">
-                test
+            <button id="send_to_py" onclick="showdiv()" py-click="send_to_page5()" class="button-white" style="font-size: 90%">
+                สุ่มข้อความ💬
             </button>
-
-            <div id="random_show" class="text-sub"></div>
-        
+        <div class="row">
+            <div id="random_show" class="output-textbox"></div>
+        </div>
         <script>
         /*แสดงผลตัวเลือกก่อนหน้านี้ว่าเลือกอะไรไป*/
             /*ดึงผลมาจากตรงurl*/
@@ -64,6 +64,12 @@
         function back() {
             window.location.href = 'page4 sharing.html?selected=' + selected;
         }
+/*Part of สุ่มข้อความให้กำลังใจ*/
+        function showdiv() {
+            var hiddenDiv = document.getElementById('random_show');
+            hiddenDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
+            hiddenDiv.style.border = '2px solid rgb(255, 255, 255)'
+            }
         </script>
 <!-- Part of สุ่มข้อความให้กำลังใจ-->
         <py-script>from js import selected</py-script>
