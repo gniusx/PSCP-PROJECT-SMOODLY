@@ -56,13 +56,14 @@
             /*ดึงผลมาจากตรงurl*/
         //const ค่าคงที่
         const urlParams = new URLSearchParams(window.location.search);
-        const selected = urlParams.get("selected");
+        selected = urlParams.get("selected");
             /*เอาค่าที่ได้ไปแสดงผลใน id=selected_show*/
         const decodedText = decodeURIComponent(selected);
         const display_selected = document.getElementById("selected_show")
         display_selected.innerHTML = decodedText;
         </script>
 <!-- Part of สุ่มข้อความให้กำลังใจ : ส่งข้อมูลไป.txt-->
+        <py-script>from js import selected</py-script>
         <py-script src="./main.py"></py-script>
 </body>
 </html>
