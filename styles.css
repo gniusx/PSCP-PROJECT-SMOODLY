@@ -54,10 +54,10 @@ h1 img {
 .text-main { /*หัวข้อเกือบทุกหน้ามั้ง แก้แล้วลองเช็คด้วย*/
     font-family: 'Prompt', sans-serif;
     font-size: 200%; 
-    margin-top: 10px;
+    margin-top: 25px;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     line-height: 0.8;
 }
 .text-sub { /*ใช้ตรง output*/
