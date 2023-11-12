@@ -59,7 +59,6 @@ h1 img {
     bottom: 0;
     opacity: 0.5;
 }
-
 .text-main { /*หัวข้อเกือบทุกหน้ามั้ง แก้แล้วลองเช็คด้วย*/
     font-family: 'Prompt', sans-serif;
     font-size: 200%; 

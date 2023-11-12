@@ -25,8 +25,15 @@
 </head>
 <body >
 <!-- bg audio -->
-<audio id="bgMusic" autoplay loop controls>
-    <source src="lofi.mp3" type="audio/mp3">
+<audio id="bgMusic" controls>
+    <source src="random_music/Lukrembo - Biscuit.mp3" type="audio/mp3">
+    <source src="random_music/Palm Trees.mp3" type="audio/mp3">
+    <source src="random_music/So Lucky - PYC.mp3" type="audio/mp3">
+    <source src="random_music/Tofuus - Soda.mp3" type="audio/mp3">
+    <source src="random_music/Tofuus - Magnolia jane.mp3" type="audio/mp3">
+    <source src="random_music/Tofuus - Iris.mp3" type="audio/mp3">
+    <source src="random_music/Tokyo Music Walker- Way Home.mp3" type="audio/mp3">
+    <source src="random_music/Vein - KV.mp3" type="audio/mp3">
 </audio>
 <!-- bg audio -->
     <div class="row">
@@ -87,6 +94,7 @@
             hiddenDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
             hiddenDiv.style.border = '2px solid rgb(255, 255, 255)'
             document.getElementById('click_sound').play();
+            setTimeout(random_bgMusic, 0);
         }
         function home_href() {
             window.location.href = 'index.html';
@@ -107,6 +115,7 @@
         }
         </script>
         <script src="./about_audio.js"></script>
+        <script src="./random_music.js"></script>
 <!-- Part of สุ่มข้อความให้กำลังใจ-->
         <py-script>from js import selected</py-script>
         <py-script src="./page5 output_randomV2.py"></py-script>
