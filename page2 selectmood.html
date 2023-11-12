@@ -68,10 +68,22 @@
             </div>
         </div>
     </div>
+<!-- Part of click_sound-->
+    <audio id="click_sound">
+        <source src="sound_effect/click_sound.mp3" type="audio/mp3">
+    </audio>
+<!-- Part of click_sound-->
+
         <!-- ส่งอันที่เลือกไปหน้า3 -->
     <script>
-        function mood(selected_mood) {
+        function next_href(selected_mood) {
             window.location.href = 'page3 topic.html?mood=' + selected_mood;
+        }
+        /*ทำให้เด้งไปหน้าถัดไปช้าลง 0.5วิ*/
+        function mood(selected_mood) {
+            setTimeout(function() {next_href(selected_mood);}, 500);
+            /*click button*/
+            document.getElementById('click_sound').play();
         }
     </script>
 </body>

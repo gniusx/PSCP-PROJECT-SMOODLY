@@ -10,11 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 <!-- font -->
-
+<!-- bg audio -->
     <audio autoplay loop controls style="display: none;">
         <source src="lofi.mp3" type="audio/mp3">
     </audio>
-
+<!-- bg audio -->
 </head>
 <body >
     <div class="row">
@@ -27,12 +27,27 @@
         วันนี้คุณมีเรื่องราวที่อยากจะแบ่งปันกับใครสักคนหรือเปล่า ?  
         <p>เรายินดีรับฟังนะ</div>
     </a>
-    <a href="page2 selectmood.html">
-        <div class="row">
-            <div class="button-white">
-                    เริ่มต้น
-            </div>
-        </div>
-        </a>
+    <div class="row">
+        <button id="start_button" onclick="playSound()" class="button-white">
+            เริ่มต้น
+        </button>
+    </div>
+<!-- Part of click_sound-->
+    <audio id="click_sound">
+        <source src="sound_effect/click_sound.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+    function next_href() {
+            window.location.href = 'page2 selectmood.html';
+        }
+        /*ทำให้เด้งไปหน้าถัดไปช้าลง 0.5วิ*/
+        function playSound() {
+            setTimeout(function() {next_href();}, 500);
+            /*click button*/
+            document.getElementById('click_sound').play();
+        }
+    </script>
+<!-- Part of click_sound-->
 </body>
 </html>
