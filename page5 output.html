@@ -23,15 +23,13 @@
 <!-- bg audio -->
     <div class="row">
         <h1>
-            <a href="index.html">
-                <button>
-                    <img src="iMages/test home.png" alt="icon-bored">
-                </button>
-            </a>
+            <button onclick="toHome()">
+                <img src="iMages/test home.png" alt="icon-home">
+            </button>
             <b>SMOODLY</b>
-                <button onclick="back()">
-                    <img src="iMages/test back.png" alt="icon-bored">
-                </button>
+            <button onclick="toBack()">
+                <img src="iMages/test back.png" alt="icon-bored">
+            </button>
             </a>
         </h1></div>
 
@@ -75,15 +73,28 @@
         const display_selected = document.getElementById("selected_show")
         display_selected.innerHTML = decodedText;
         
-        /*ปุ่ม back*/
-        function back() {
-            window.location.href = 'page4 sharing.html?selected=' + selected;
-        }
 /*Part of สุ่มข้อความให้กำลังใจ*/
         function showdiv() {
             var hiddenDiv = document.getElementById('random_show');
             hiddenDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
             hiddenDiv.style.border = '2px solid rgb(255, 255, 255)'
+            document.getElementById('click_sound').play();
+        }
+        function home_href() {
+            window.location.href = 'index.html';
+        }
+        function toHome() {
+            setTimeout(function() {home_href();}, 500);
+            /*click button*/
+            document.getElementById('click_sound').play();
+        }
+        /*ปุ่ม back*/
+        function back_href() {
+            window.location.href = 'page4 sharing.html?selected=' + selected;
+        }
+        function toBack() {
+            setTimeout(function() {back_href();}, 500);
+            /*click button*/
             document.getElementById('click_sound').play();
         }
         </script>

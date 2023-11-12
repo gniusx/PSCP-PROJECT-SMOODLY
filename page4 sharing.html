@@ -19,17 +19,13 @@
 <!-- bg audio -->
     <div class="row">
         <h1>
-            <a href="index.html">
-                <button>
-                    <img src="iMages/test home.png" alt="icon-home">
-                </button>
-            </a>
+            <button onclick="toHome()">
+                <img src="iMages/test home.png" alt="icon-home">
+            </button>
             <b>SMOODLY</b>
-            <a href="page2 selectmood.html">
-                <button>
-                    <img src="iMages/test back.png" alt="icon-back">
-                </button>
-            </a>
+           <button onclick="toBack()">
+                <img src="iMages/test back.png" alt="icon-back">
+            </button>
         </h1>
     </div>
         
@@ -65,6 +61,22 @@
         /*ทำให้เด้งไปหน้าถัดไปช้าลง 0.5วิ*/
         function to_output() {
             setTimeout(function() {next_href();}, 500);
+            /*click button*/
+            document.getElementById('click_sound').play();
+        }
+        function home_href() {
+            window.location.href = 'index.html';
+        }
+        function toHome() {
+            setTimeout(function() {home_href();}, 500);
+            /*click button*/
+            document.getElementById('click_sound').play();
+        }
+        function back_href() {
+            window.location.href = 'page2 selectmood.html';
+        }
+        function toBack() {
+            setTimeout(function() {back_href();}, 500);
             /*click button*/
             document.getElementById('click_sound').play();
         }
