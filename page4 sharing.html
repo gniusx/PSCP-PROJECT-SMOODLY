@@ -39,11 +39,11 @@
         
     <p id="selected_show" class="text-sub"></p>
     <p class="text-sub">เราพร้อมที่จะรับฟังคุณนะ</p>
-
+    <br>
     <div class="row">
         <form>
             <textarea type="text" id="thoughts" name="input1" placeholder="พิมพ์ที่นี่"
-            rows="20" cols="60" style="margin: 15px;"></textarea><br>
+            rows="10" cols="50" style="margin: 15px;"></textarea><br>
         </form>
     </div>
 
@@ -61,7 +61,7 @@
         const selected = urlParams.get("selected");
         
         const element = document.getElementById("selected_show")
-        element.innerHTML = "ต้องการเล่าถึงสิ่งที่ทำให้คุณรู้สึก"+selected+"ไหม?";
+        element.innerHTML = "ต้องการเล่าถึงสิ่งที่ทำให้คุณรู้สึก"+selected+"ไหม ?";
 
         function next_href() {
             window.location.href = 'page5 output.html?selected=' + selected;
