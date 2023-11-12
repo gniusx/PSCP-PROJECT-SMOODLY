@@ -71,6 +71,11 @@
             </button>
         </div>
     </div>
+<!-- Part of click_sound-->
+    <audio id="click_sound">
+        <source src="sound_effect/click_sound.mp3" type="audio/mp3">
+    </audio>
+<!-- Part of click_sound-->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const selected_mood = urlParams.get("mood");
@@ -78,8 +83,14 @@
         const element = document.getElementById("mood_show")
         element.innerHTML = "คุณรู้สึก"+selected_mood+"ใช่ไหม?";
 
-        function topic(selected_topic) {
+        function next_href(selected_topic) {
             window.location.href = 'page4 sharing.html?selected=' + selected_mood + "เรื่อง" + selected_topic;
+        }
+        /*ทำให้เด้งไปหน้าถัดไปช้าลง 0.5วิ*/
+        function topic(selected_topic) {
+            setTimeout(function() {next_href(selected_topic);}, 500);
+            /*click button*/
+            document.getElementById('click_sound').play();
         }
     </script>
 </body>

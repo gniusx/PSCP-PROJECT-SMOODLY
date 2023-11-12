@@ -49,6 +49,12 @@
         <div class="row">
             <div id="random_show" class="output-textbox"></div>
         </div>
+<!-- Part of click_sound-->
+    <audio id="click_sound">
+        <source src="sound_effect/click_sound.mp3" type="audio/mp3">
+    </audio>
+<!-- Part of click_sound-->
+
         <script>
         /*แสดงผลตัวเลือกก่อนหน้านี้ว่าเลือกอะไรไป*/
             /*ดึงผลมาจากตรงurl*/
@@ -69,7 +75,8 @@
             var hiddenDiv = document.getElementById('random_show');
             hiddenDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
             hiddenDiv.style.border = '2px solid rgb(255, 255, 255)'
-            }
+            document.getElementById('click_sound').play();
+        }
         </script>
 <!-- Part of สุ่มข้อความให้กำลังใจ-->
         <py-script>from js import selected</py-script>

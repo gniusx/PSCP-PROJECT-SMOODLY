@@ -44,8 +44,12 @@
         <button onclick="to_output()" class="button-white">
             ต่อไป
         </button>
-
-    </body>
+<!-- Part of click_sound-->
+<audio id="click_sound">
+    <source src="sound_effect/click_sound.mp3" type="audio/mp3">
+</audio>
+<!-- Part of click_sound-->
+    
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const selected = urlParams.get("selected");
@@ -53,9 +57,15 @@
         const element = document.getElementById("selected_show")
         element.innerHTML = "ต้องการเล่าถึงสิ่งที่ทำให้คุณรู้สึก"+selected+"ไหม?";
 
-        function to_output() {
+        function next_href() {
             window.location.href = 'page5 output.html?selected=' + selected;
         }
+        /*ทำให้เด้งไปหน้าถัดไปช้าลง 0.5วิ*/
+        function to_output() {
+            setTimeout(function() {next_href();}, 500);
+            /*click button*/
+            document.getElementById('click_sound').play();
+        }
     </script>
-
+    </body>
 </html>
