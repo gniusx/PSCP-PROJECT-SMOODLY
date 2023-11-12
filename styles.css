@@ -166,3 +166,7 @@ textarea { /*กล่องข้อความหน้า 4*/
 a {
     text-decoration: none;
 }
+
+button{
+    cursor: pointer;
+}
