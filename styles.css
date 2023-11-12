@@ -170,3 +170,9 @@ a {
 button{
     cursor: pointer;
 }
+.img1{
+    float: left;
+}
+.img2{
+    float: right;
+}
