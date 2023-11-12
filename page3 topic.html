@@ -87,7 +87,7 @@
         const selected_mood = urlParams.get("mood");
 
         const element = document.getElementById("mood_show")
-        element.innerHTML = "คุณรู้สึก"+selected_mood+"ใช่ไหม?";
+        element.innerHTML = "คุณรู้สึก<u>"+selected_mood+"</u>ใช่ไหม?";
 
         function next_href(selected_topic) {
             window.location.href = 'page4 sharing.html?selected=' + selected_mood + "เรื่อง" + selected_topic;

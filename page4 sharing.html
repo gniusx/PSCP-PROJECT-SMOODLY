@@ -61,7 +61,7 @@
         const selected = urlParams.get("selected");
         
         const element = document.getElementById("selected_show")
-        element.innerHTML = "ต้องการเล่าถึงสิ่งที่ทำให้คุณรู้สึก"+selected+"ไหม ?";
+        element.innerHTML = "ต้องการเล่าถึงสิ่งที่ทำให้คุณรู้สึก<u>"+selected+"</u>ไหม ?";
 
         function next_href() {
             window.location.href = 'page5 output.html?selected=' + selected;
