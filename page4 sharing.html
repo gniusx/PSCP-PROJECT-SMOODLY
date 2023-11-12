@@ -9,41 +9,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-    <audio autoplay loop controls style="display: none;">
-        <source src="lofi.mp3" type="audio/mp3">
-    </audio>
 <!-- font -->
 </head>
-<body >
-        <div class="row">
-            <h1>
-                <a href="index.html">
-                    <button>
-                        <img src="iMages/test home.png" alt="icon-home">
-                    </button>
-                </a>
-                <b>SMOODLY</b>
-                <a href="page2 selectmood.html">
-                    <button>
-                        <img src="iMages/test back.png" alt="icon-back">
-                    </button>
-                </a>
-            </h1>
-        </div>
-            
-        <p id="selected_show" class="text-sub"></p>
-        <p class="text-sub">เราพร้อมที่จะรับฟังคุณนะ</p>
+<body>
+<!-- bg audio -->
+    <audio id="bgMusic" autoplay loop controls>
+        <source src="lofi.mp3" type="audio/mp3">
+    </audio>
+<!-- bg audio -->
+    <div class="row">
+        <h1>
+            <a href="index.html">
+                <button>
+                    <img src="iMages/test home.png" alt="icon-home">
+                </button>
+            </a>
+            <b>SMOODLY</b>
+            <a href="page2 selectmood.html">
+                <button>
+                    <img src="iMages/test back.png" alt="icon-back">
+                </button>
+            </a>
+        </h1>
+    </div>
+        
+    <p id="selected_show" class="text-sub"></p>
+    <p class="text-sub">เราพร้อมที่จะรับฟังคุณนะ</p>
 
-        <div class="row">
-            <form>
-                <textarea type="text" id="thoughts" name="input1" placeholder="พิมพ์ที่นี่"
-                rows="20" cols="60" style="margin: 15px;"></textarea><br>
-            </form>
-        </div>
+    <div class="row">
+        <form>
+            <textarea type="text" id="thoughts" name="input1" placeholder="พิมพ์ที่นี่"
+            rows="20" cols="60" style="margin: 15px;"></textarea><br>
+        </form>
+    </div>
 
-        <button onclick="to_output()" class="button-white">
-            ต่อไป
-        </button>
+    <button onclick="to_output()" class="button-white">
+        ต่อไป
+    </button>
 <!-- Part of click_sound-->
 <audio id="click_sound">
     <source src="sound_effect/click_sound.mp3" type="audio/mp3">
