@@ -1,4 +1,4 @@
-"""แผนสำรองเพราะเหมือนpyscriptจะเปิดไฟล์ไม่ได้"""
+"""สำหรับสร้าง output_dict ver.txt"""
 output_dict = dict()
 def randomtext(selected):
     """เสิชชื่อไฟล์ที่ตรงกับ input มาทำ list"""
@@ -9,35 +9,14 @@ def randomtext(selected):
         eachline = file.readlines()
     output_dict[selected] = eachline
     return
-randomtext("angry-family")
-randomtext("angry-friends")
-randomtext("angry-health")
-randomtext("angry-love")
-randomtext("angry-study-work")
-
-randomtext("bored-family")
-randomtext("bored-friends")
-randomtext("bored-health")
-randomtext("bored-love")
-randomtext("bored-study-work")
-
-randomtext("happy-family")
-randomtext("happy-friends")
-randomtext("happy-health")
-randomtext("happy-love")
-randomtext("happy-study-work")
-
-randomtext("sad-family")
-randomtext("sad-friends")
-randomtext("sad-health")
-randomtext("sad-love")
-randomtext("sad-study-work")
-
-randomtext("worry-family")
-randomtext("worry-friends")
-randomtext("worry-health")
-randomtext("worry-love")
-randomtext("worry-study-work")
+#dict จาก trans_to_eng
+mood = {'เศร้า':'sad','โกรธ':'angry', 'เบื่อ':'bored', 'กังวล':'worry', 'มีความสุข':'happy'}
+topic = {'ครอบครัว':'family','เพื่อน':'friends', 'ความรัก':'love', 'เรียน/งาน':'study-work', 'สุขภาพ':'health'}
+for i in mood.values():
+    for j in topic.values():
+        filename = '%s-%s' %(i, j)
+        randomtext(filename)
+#ส่งdict ที่รวมข้อความ output ไป .txt
 f = open('output_dict ver.txt', 'w')
 f.write(str(output_dict))
 f.close
